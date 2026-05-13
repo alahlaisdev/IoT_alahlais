@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: will42
+  namespace: dev
+spec:
+  template:
+    spec:
+      containers:
+      - name: will
+        image: wil42/playground
+        ports:
+        - containerPort: 8888
