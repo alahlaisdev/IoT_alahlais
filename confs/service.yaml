@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: hello-svc
   labels:
-    app: hello-world
+    app: will-playground
 spec:
   type: NodePort
   ports:
