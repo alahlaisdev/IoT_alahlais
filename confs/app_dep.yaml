@@ -4,10 +4,16 @@ metadata:
   name: will42
   namespace: dev
 spec:
-  template:
-    spec:
-      containers:
-      - name: will
-        image: wil42/playground
-        ports:
-        - containerPort: 8888
+    selector:
+      matchLabels:
+        app: will_app
+    template:
+      metadata:
+        labels:
+          app: will_app
+      spec:
+        containers:
+        - name: will
+          image: wil42/playground
+          ports:
+            - containerPort: 8888
